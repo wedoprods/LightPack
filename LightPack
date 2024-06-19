@@ -1,0 +1,6 @@
+local Remote
+local Data = getsenv(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.ClientScript).displayCurrent
+local Values = getupvalue(Data,8)
+Remote = Values["RemoteEvent"]
+Data, Values = nil
+Remote:FireServer("BuyLightPack", {{}})
